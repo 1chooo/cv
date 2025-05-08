@@ -1,0 +1,432 @@
+% --------------------------------
+% Resume in Latex
+% Author Chun-Ho (Hugo) Lin (1chooo) <hugo970217@gmail.com>
+% License : MIT
+% --------------------------------
+
+% ---- Required Packages and Functions ----
+
+\documentclass[a4paper, 11pt]{article}
+\usepackage{latexsym}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage[empty]{fullpage}
+\usepackage{wrapfig}
+\usepackage{lipsum}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{geometry}
+\usepackage{marvosym}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}    % Hide the link box
+% \usepackage{hyperref}             % Show the link box
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{helvet}                 % PSNFSS Font, in every TeX distribution
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage[T1]{fontenc}
+\setlength{\multicolsep}{0pt} 
+\pagestyle{fancy}
+\fancyhf{}                          % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\geometry{
+    left=1.4cm, 
+    top=0.8cm, 
+    right=1.2cm, 
+    bottom=1cm
+}
+
+% Adjust margins
+%\addtolength{\oddsidemargin}{-0.5in}
+%\addtolength{\evensidemargin}{-0.5in}
+%\addtolength{\textwidth}{1in}
+\usepackage[most]{tcolorbox}
+\tcbset{
+	frame code={}
+	center title,
+	left=0pt,
+	right=0pt,
+	top=0pt,
+	bottom=0pt,
+	colback=gray!20,
+	colframe=white,
+	width=\dimexpr\textwidth\relax,
+	enlarge left by=-2mm,
+	boxsep=4pt,
+	arc=0pt,outer arc=0pt,
+}
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    label=-, 
+    leftmargin=0cm, 
+    itemsep=0cm, 
+    topsep=0cm
+}
+
+\urlstyle{same}
+
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{olive}\titlerule \vspace{-7pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
+  }
+}
+
+\newcommand{\resumePOR}[3]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
+    \end{tabular*}
+    \vspace{-2mm}
+}
+
+\newcommand{\resumeSubheading}[4]{
+\vspace{0.5mm}\item[]
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#4}} \\
+        \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeProject}[4]{
+\vspace{0.5mm}\item
+    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{#1} & \textit{\footnotesize{#3}} \\
+        \footnotesize{\textit{#2}} & \footnotesize{#4}
+    \end{tabular*}
+    \vspace{-2.4mm}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\newcommand{\resumeSubHeadingListStart}{
+    \begin{itemize}[leftmargin=*,labelsep=0mm]
+}
+\newcommand{\resumeHeadingSkillStart}{
+    \begin{itemize}[
+        leftmargin=*,
+        itemsep=1.7mm, 
+        rightmargin=2ex
+    ]
+}
+
+\newcommand{\resumeItemListStart}{
+    \begin{justify}\begin{itemize}[
+        leftmargin=3ex, 
+        rightmargin=2ex, 
+        noitemsep,
+        labelsep=1.2mm,
+        itemsep=0.5mm
+    ]\small
+}
+
+\newcommand{\resumeSubHeadingListEnd}{
+    \end{itemize}
+    \vspace{2mm}
+}
+\newcommand{\resumeHeadingSkillEnd}{
+    \end{itemize}
+    \vspace{-2mm}
+}
+\newcommand{\resumeItemListEnd}{
+    \end{itemize}\end{justify}\vspace{-2mm}
+}
+\newcommand{\cvsection}[1]{
+    \vspace{2mm}
+    \begin{tcolorbox}
+        \textbf{\large #1}
+    \end{tcolorbox}
+        \vspace{-4mm}
+}
+
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+%---- End of Packages and Functions --------
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%
+%%%%%% DEFINE ELEMENTS HERE %%%%%%%
+\newcommand{\name}{Chun-Ho Lin} % Your Name
+\newcommand{\course}{Dept. of Atmospheric Science, NCU.} % Your Program
+\newcommand{\roll}{xxxxxxx} % Your Roll No.
+\newcommand{\phone}{909 001 068} % Your Phone Number
+\newcommand{\emaila}{hugo970217@gmail.com} %Email 1
+\newcommand{\emailb}{lcho0127@g.ncu.edu.tw} %Email 2
+\newcommand{\myScore}{}
+\newcommand{\announcement}{B.S. in ATM, Minor in CS, NCU | Ex AWS, PEGATRON, eCloudValley}
+% \newcommand{\myScore}{GPA: 3.11/4.30; Rank: 26/35}
+
+\definecolor{linkcolour}{rgb}{0, 0.2, 0.6}
+\hypersetup{
+    colorlinks,
+    breaklinks,
+    urlcolor=linkcolour,
+    linkcolor=linkcolour
+}
+
+\begin{document}
+\fontfamily{cmr}\selectfont
+
+% Set the footskip to the minimum required value
+\setlength{\footskip}{4.08003pt}
+
+%----------HEADING-----------------
+\begin{center}
+    \textbf{\huge \name}
+\end{center}
+
+\begin{center}
+    \announcement
+\end{center}
+
+\begin{center}
+    \href{tel:+886-\phone}{
+        \underline{
+            \raisebox{0.0\height}{\footnotesize \faPhone}\
+            {(+886) \phone}
+        }
+    } |
+    \href{mailto:\emaila}{
+        \underline{
+            \raisebox{0.0\height}{\footnotesize \faEnvelope}\
+            {\emaila}
+        }
+    } |
+    \href{https://www.1chooo.com/}{
+        \underline{
+            \raisebox{0.0\height}{\footnotesize \faGlobe}\
+            {1chooo.com}
+        }
+    } |
+    \href{https://github.com/1chooo}{
+        \underline{
+            \raisebox{0.0\height}{\footnotesize \faGithub}\
+            {1chooo}
+        }
+    } |
+    \href{https://www.linkedin.com/in/1chooo/}{
+        \underline{
+            \raisebox{0.0\height}{\footnotesize \faLinkedin}\
+            {in/1chooo/}
+        }
+    }
+\end{center}
+  
+\vspace{-4.0mm}
+
+%-----------EDUCATION-----------------
+% \input{education.tex}
+
+\section{\textcolor{olive}{\textbf{Education}}}
+	\resumeSubHeadingListStart
+		
+    \resumeSubheading
+        {National Central University}
+        {Sep. 2020 - Jun. 2024}
+        {Bachelor of Science in Atmospheric Science, Minor Specialty in Computer Science \myScore}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} Taoyuan, Taiwan}
+		
+        \vspace{-1.0mm}
+            
+        \resumeItemListStart
+            \item {
+                \textbf{Graduate-level Courses:}
+                The Attack and Defense of Computers,
+                Object-Oriented Analysis and Design
+            }
+            \item {
+                \textbf{B.S.-level Courses:}
+                Software Engineering,
+                Principles of Programming Languages,
+                Assembly Language and System Programming,
+                Operating System,
+                Computer Network,
+                Algorithmics, 
+                Data Structures, 
+                Digital Design
+            }
+            \item {
+                \textbf{TA:} 
+                Linux and Edge Computing,
+                Programming Python, 
+                Weather and Artificial Intelligence
+            }
+        \resumeItemListEnd
+		  
+	\resumeSubHeadingListEnd
+
+\vspace{-5.5mm}
+
+%-----------Technical skills-----------------
+\section{\textcolor{olive}{\textbf{Technical Skills}}}
+
+    \vspace{1.0mm}
+
+    \begin{itemize}[
+        leftmargin=0.20in, 
+        label={-}, 
+        itemsep=-2pt, 
+        topsep=0pt,
+        rightmargin=0.10in
+    ]
+        \item Programmings: Python (primary), C++/C, Java, Go, TypeScript, JavaScript, X86 Assembly, \LaTeX
+        \item DevOps: AWS, Docker, Git, Bash, GitHub Actions, Azure, Terraform, Kubernetes, mySQL, Redis
+        \item ML/DL: LangChain, TensorFlow, Scikit-learn, Keras, Numpy, Pandas
+    \end{itemize}
+
+\vspace{-3.0mm}
+
+%-----------PROFESSIONAL EXPERIENCE-----------------
+\section{\textcolor{olive}{\textbf{Professional Experience}}}
+    \resumeSubHeadingListStart
+    
+    \resumeSubheading
+        {eCloudValley Digital Technology}
+        {Mar. 2024 - May. 2024}
+        {Cloud Engineer Intern}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} New Taipei, Taiwan}
+
+        \vspace{-1.0mm}
+
+        \resumeItemListStart
+            \item {Led a team of 5 to enhance issue pools with AWS Bedrock, boosting cloud support efficiency by 80\% through multi-language support and 95\% accurate image recognition. Honored as the top-achieving internship team.}
+            \item {Utilized a serverless architecture on AWS Lambda, performing troubleshooting with CloudWatch, deployed via AWS CDK, and integrated with DynamoDB and Bedrock services.}
+            \item {Documented issues in 10+ mock cases, such as VPC entry failures, EC2 Apache server restarts, and S3 photo access problems, and provided detailed solutions for interns. Refer \href{https://github.com/1chooo/ecv-training-materials/tree/main/msp/aws_challenge}{\underline{here}} for a comprehensive list.}
+        \resumeItemListEnd
+
+    \vspace{-1.0mm}
+    
+    \resumeSubheading
+        {Amazon Web Services}
+        {Aug. 2023 - Feb. 2024}
+        {Cloud Ambassador Technical Support}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
+
+        \vspace{-1.0mm}
+
+        \resumeItemListStart
+            \item Educated 700+ cloud developers and achieved 96\% user satisfaction by conducting 2 technical workshops, developing an open-source project, and 1 UAD with AWS cloud services. Refer \href{https://github.com/aws-educate-tw/aws-line-business-card-workshop}{\underline{here}} for the source code.
+            \item {Conducted a comprehensive 35+ page market research study on cloud suppliers as part of an 11-member team.}
+        \resumeItemListEnd
+
+    \vspace{-1.0mm}
+    
+    \resumeSubheading
+        {PEGATRON Corporation}
+        {Jul. 2023 - Aug. 2023}
+        {Software Engineer Intern}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
+            
+        \vspace{-1.0mm}
+        
+        \resumeItemListStart
+            \item {Executed a POC, adapting an LLM model for Smart Manufacturing, and was awarded Silver internship team.}
+            \item {Collaborated with a team of 5, utilized Git, a CI/CD pipeline, and followed an agile Scrum workflow.}
+            \item {Implemented {Prompt Engineering} and {LangChain} for the {NVIDIA Ominerve visual robot}, enabling seamless speech/text operation, boosting test support by {83\%} across {6-11} scenarios with {85\%} stability.}
+        \resumeItemListEnd
+
+    \vspace{-1.0mm}
+    
+    \resumeSubheading
+        {National Central University}
+        {Jul. 2022 - Jan. 2023}
+        {Website Developer}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} Taoyuan, Taiwan}
+            
+        \vspace{-1.0mm}
+        
+        \resumeItemListStart
+            \item Partnered with a team of 2 to develop a multi-user score management system for the Center for Teacher Education, reducing credit exemption processing time by 80\% and remotely maintaining the server via SSH.
+        \resumeItemListEnd
+
+    \vspace{-0.0mm}
+
+    \resumeSubHeadingListEnd
+  
+\vspace{-5.5mm}
+
+%-----------PROJECTS-----------------
+\section{\textcolor{olive}{\textbf{Selected Projects}}}
+    \resumeSubHeadingListStart
+
+    \resumeSubheading
+        {Refinaid: Bridging the Gap with AI For Everyone} % Project Name
+        {Aug. 2023 - present*} % Event Dates
+        {Founder | Fullstack Developer} % Role
+        {\href{https://github.com/1chooo/refinaid}{\underline{\faGithub\ Code}} | \href{https://1chooo.github.io/refinaid}{\underline{{\faBook}\ Docs}}} % Project Resources
+
+        \vspace{-1.0mm}
+
+        \resumeItemListStart
+            \item {Built 2 low-code platforms, SIMPLE-AI and Chatger, while serving as a TA for 3 courses, offering a {no-code interface} for training AI/ML/DL models and a {coding platform} for homework submissions with {LLM} assistance.}
+        \resumeItemListEnd
+
+    \vspace{-2.0mm}
+
+    \resumeSubheading
+        {\text{1chooo.com}: A Monorepo of Personal Website and Blog} % Project Name
+        {Jan. 2024 - present*} % Event Dates
+        {Frontend Developer} % Role
+        {\href{https://github.com/1chooo/1chooo.com}{\underline{\faGithub\ Code}} | \href{https://docs.1chooo.com}{\underline{{\faBook}\ Docs}} | \href{https://www.1chooo.com}{\underline{\faDesktop\ Demo}}} % Project Resources
+        
+        \vspace{-1.0mm}
+        
+        \resumeItemListStart
+            \item {Refactored HTML/CSS template to {React} components, integrated with {Next.js Turborepo}, and tested with {Jest}.}
+        \resumeItemListEnd
+
+    \vspace{-2.0mm}
+            
+    \resumeSubheading
+        {Lisp intepreter} % Project Name
+        {Oct. 2023 - Jan. 2024} % Event Dates
+        {Compiler Engineer} % Role
+        {\href{https://github.com/1chooo/compiler-101/tree/main/mini-lisp-interpreter}{\underline{\faGithub\ Code}} | \href{https://github.com/1chooo/compiler-101/tree/main/mini-lisp-interpreter}{\underline{{\faBook}\ Docs}}} % Project Resources
+        
+        \vspace{-1.0mm}
+        
+        \resumeItemListStart
+            \item {Crafted a {Lisp Interpreter} using {C} and {YACC} to parse and evaluate if expressions, variable definitions, numerical operations, nested functions, type checking, and recursion in Lisp.}
+        \resumeItemListEnd
+            
+    \resumeSubHeadingListEnd
+
+\vspace{-5.5mm}
+
+%-----------AWARDS-----------------
+\section{\textcolor{olive}{\textbf{Awards}}}
+
+    \vspace{1.0mm}
+
+    \begin{itemize}[
+        leftmargin=0.20in, 
+        label={-}, 
+        itemsep=-2pt, 
+        topsep=0pt,
+        rightmargin=0.10in
+    ]
+        \item Top-Achieving Internship Team, eCloudValley Digital Technology \hfill \hspace{-0.2cm} {\footnotesize{Mar. 2024 - May. 2024}}
+        \item Silver Internship Team, PEGATRON Corporation \hfill {\footnotesize{Jul. 2023 - Aug. 2023}}
+        \item Second Place \& Sustainability Special Award, 2023 Weather Hackathon \hfill \textit{\footnotesize{May. 2023 - Aug. 2023}}
+    \end{itemize}
+
+\end{document}
