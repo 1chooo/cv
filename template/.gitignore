@@ -1,0 +1,12 @@
+*.fdb_latexmk
+*.fls
+
+*.log
+*.aux
+*.out
+*.synctex.gz
+# *.pdf
+*.lot
+.DS_Store
+
+.vscode
