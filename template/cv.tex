@@ -1,8 +1,8 @@
-% --------------------------------
+% ----------------------------------------------------------
 % Resume in Latex
 % Author Chun-Ho (Hugo) Lin (1chooo) <hugo970217@gmail.com>
 % License : MIT
-% --------------------------------
+% ----------------------------------------------------------
 
 % ---- Required Packages and Functions ----
 
@@ -189,51 +189,17 @@
 % Set the footskip to the minimum required value
 \setlength{\footskip}{4.08003pt}
 
-%----------HEADING-----------------
-\begin{center}
-    \textbf{\huge \name}
-\end{center}
+% ----------------------------------------------------------
+% HEADER
+% ----------------------------------------------------------
 
-\begin{center}
-    \announcement
-\end{center}
-
-\begin{center}
-    \href{tel:+886-\phone}{
-        \underline{
-            \raisebox{0.0\height}{\footnotesize \faPhone}\
-            {(+886) \phone}
-        }
-    } |
-    \href{mailto:\emaila}{
-        \underline{
-            \raisebox{0.0\height}{\footnotesize \faEnvelope}\
-            {\emaila}
-        }
-    } |
-    \href{https://www.1chooo.com/}{
-        \underline{
-            \raisebox{0.0\height}{\footnotesize \faGlobe}\
-            {1chooo.com}
-        }
-    } |
-    \href{https://github.com/1chooo}{
-        \underline{
-            \raisebox{0.0\height}{\footnotesize \faGithub}\
-            {1chooo}
-        }
-    } |
-    \href{https://www.linkedin.com/in/1chooo/}{
-        \underline{
-            \raisebox{0.0\height}{\footnotesize \faLinkedin}\
-            {in/1chooo/}
-        }
-    }
-\end{center}
+\input{header.tex}
   
 \vspace{-4.0mm}
 
-%-----------EDUCATION-----------------
+% ----------------------------------------------------------
+% EDUCATION
+% ----------------------------------------------------------
 \input{education.tex}
 
 \end{document}
