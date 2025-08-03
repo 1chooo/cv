@@ -78,8 +78,8 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{olive}\titlerule \vspace{-7pt}]
+  \scshape\raggedright\large
+}{}{0em}{}[\color{olive}\titlerule \vspace{-1mm}]
 
 %-------------------------
 % Custom commands
@@ -89,16 +89,8 @@
   }
 }
 
-\newcommand{\resumePOR}[3]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}\hspace{0.3mm}#2 & \textit{\small{#3}} 
-    \end{tabular*}
-    \vspace{-2mm}
-}
-
 \newcommand{\resumeSubheading}[4]{
-\vspace{0.5mm}\item[]
+\item[]
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
@@ -106,26 +98,8 @@
     \vspace{-2.4mm}
 }
 
-\newcommand{\resumeProject}[4]{
-\vspace{0.5mm}\item
-    \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#3}} \\
-        \footnotesize{\textit{#2}} & \footnotesize{#4}
-    \end{tabular*}
-    \vspace{-2.4mm}
-}
-
-\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
-\renewcommand{\labelitemi}{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \newcommand{\resumeSubHeadingListStart}{
     \begin{itemize}[leftmargin=*,labelsep=0mm]
-}
-\newcommand{\resumeHeadingSkillStart}{
-    \begin{itemize}[
-        leftmargin=*,
-        itemsep=1.7mm, 
-        rightmargin=2ex
-    ]
 }
 
 \newcommand{\resumeItemListStart}{
@@ -142,24 +116,10 @@
     \end{itemize}
     \vspace{2mm}
 }
-\newcommand{\resumeHeadingSkillEnd}{
-    \end{itemize}
-    \vspace{-2mm}
-}
 \newcommand{\resumeItemListEnd}{
     \end{itemize}\end{justify}\vspace{-2mm}
 }
-\newcommand{\cvsection}[1]{
-    \vspace{2mm}
-    \begin{tcolorbox}
-        \textbf{\large #1}
-    \end{tcolorbox}
-        \vspace{-4mm}
-}
 
-\newcolumntype{L}{>{\raggedright\arraybackslash}X}
-\newcolumntype{R}{>{\raggedleft\arraybackslash}X}
-\newcolumntype{C}{>{\centering\arraybackslash}X}
 %---- End of Packages and Functions --------
 
 %-------------------------------------------
@@ -230,8 +190,6 @@
         }
     }
 \end{center}
-  
-\vspace{-4.0mm}
 
 %-----------EDUCATION-----------------
 
@@ -262,15 +220,9 @@
 		  
 	\resumeSubHeadingListEnd
 
-
-
-\vspace{-5.5mm}
-
 %-----------Technical skills-----------------
 
 \section{\textcolor{olive}{\textbf{Skills}}}
-
-    \vspace{1.0mm}
 
     \begin{itemize}[
         leftmargin=0.20in, 
@@ -285,8 +237,6 @@
     \end{itemize}
 
 
-\vspace{-3.0mm}
-
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{\textcolor{olive}{\textbf{Industry Experience}}}
     \resumeSubHeadingListStart
@@ -297,36 +247,26 @@
         {Cloud Engineer Intern}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} New Taipei, Taiwan}
 
-        \vspace{-1.0mm}
-
         \resumeItemListStart
             \item {Led a team of 5 to enhance issue pools with AWS Bedrock, boosting cloud support efficiency by 80\% through multi-language support and 95\% accurate image recognition. Honored as the top-achieving internship team.}
             \item {Utilized a serverless architecture on AWS Lambda, performing troubleshooting with CloudWatch, deployed via AWS CDK, and integrated with DynamoDB and Bedrock services.}
             \item {Documented issues in 10+ mock cases, such as VPC entry failures, EC2 Apache server restarts, and S3 photo access problems, and provided detailed solutions for interns. Refer \href{https://github.com/1chooo/ecv-training-materials/tree/main/msp/aws_challenge}{\underline{here}} for a comprehensive list.}
         \resumeItemListEnd
 
-    \vspace{-1.0mm}
-    
     \resumeSubheading
         {PEGATRON Corporation}
         {Jul. 2023 - Aug. 2023}
         {Software Engineer Intern}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
             
-        \vspace{-1.0mm}
-        
         \resumeItemListStart
             \item {Executed a POC, adapting an LLM model for Smart Manufacturing, and was awarded Silver internship team.}
             \item {Collaborated with a team of 5, utilized Git, a CI/CD pipeline, and followed an agile Scrum workflow.}
             \item {Implemented {Prompt Engineering} and {LangChain} for the {NVIDIA Ominerve visual robot}, enabling seamless speech/text operation, boosting test support by {83\%} across {6-11} scenarios with {85\%} stability.}
         \resumeItemListEnd
 
-    \vspace{-1.0mm}
-    
     \resumeSubHeadingListEnd
   
-\vspace{-5.5mm}
-
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{\textcolor{olive}{\textbf{Extracurricular Activities}}}
     \resumeSubHeadingListStart
@@ -337,8 +277,6 @@
         {Cloud Ambassador Technical Support}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
 
-        \vspace{-1.0mm}
-
         \resumeItemListStart
             \item Educated 700+ cloud developers and achieved 96\% user satisfaction by conducting 2 technical workshops, developing an open-source project, and 1 UAD with AWS cloud services. Refer \href{https://github.com/aws-educate-tw/aws-line-business-card-workshop}{\underline{here}} for the source code.
             \item {Conducted a comprehensive 35+ page market research study on cloud suppliers as part of an 11-member team.}
@@ -346,8 +284,6 @@
 
     \resumeSubHeadingListEnd
   
-\vspace{-5.5mm}
-
 %-----------PROJECTS-----------------
 \section{\textcolor{olive}{\textbf{Selected Projects}}}
     \resumeSubHeadingListStart
@@ -361,8 +297,6 @@
         } % Project Name
         {Frontend Developer} % Project Name
         {Jan. 2024 - present} % Event Dates
-        
-        \vspace{-1.0mm}
         
         \resumeItemListStart
             \item {300+ GitHub stars}
@@ -378,8 +312,6 @@
         {Frontend Developer} % Project Name
         {Jul. 2025 - present} % Event Dates
         
-        \vspace{-1.0mm}
-        
         \resumeItemListStart
             \item {MDX Blog with Next.js, TypeScript, and Tailwind CSS.}
         \resumeItemListEnd
@@ -388,8 +320,6 @@
 
 %-----------AWARDS-----------------
 \section{\textcolor{olive}{\textbf{Awards}}}
-
-    \vspace{1.0mm}
 
     \begin{itemize}[
         leftmargin=0.20in, 
