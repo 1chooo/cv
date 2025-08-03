@@ -79,30 +79,35 @@
 % Sections formatting
 \titleformat{\section}{
   \scshape\raggedright\large
-}{}{0em}{}[\color{olive}\titlerule \vspace{-1mm}]
+}{}{0em}{}[\color{olive}\titlerule]
+
+% Custom section command
+\newcommand{\cvSection}[1]{
+    \section{\textcolor{olive}{\textbf{#1}}}
+}
 
 %-------------------------
 % Custom commands
-\newcommand{\resumeItem}[2]{
-  \item{
-    \textbf{#1}{\hspace{0.5mm}#2 \vspace{-0.5mm}}
-  }
-}
 
-\newcommand{\resumeSubheading}[4]{
+
+\newcommand{\subHeaderEntry}[4]{
 \item[]
     \begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textbf{#1} & \textit{\footnotesize{#4}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#2}\\
     \end{tabular*}
-    \vspace{-2.4mm}
+    \vspace{-3.0mm}
 }
 
-\newcommand{\resumeSubHeadingListStart}{
+\newcommand{\subHeaderStart}{
     \begin{itemize}[leftmargin=*,labelsep=0mm]
 }
 
-\newcommand{\resumeItemListStart}{
+\newcommand{\subHeaderEnd}{
+    \end{itemize}\vspace{-5.0mm}
+}
+
+\newcommand{\subHeaderItemStart}{
     \begin{justify}\begin{itemize}[
         leftmargin=3ex, 
         rightmargin=2ex, 
@@ -112,12 +117,34 @@
     ]\small
 }
 
-\newcommand{\resumeSubHeadingListEnd}{
-    \end{itemize}
-    \vspace{2mm}
+\newcommand{\subHeaderItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{1mm}#2}
+  }
 }
-\newcommand{\resumeItemListEnd}{
-    \end{itemize}\end{justify}\vspace{-2mm}
+
+\newcommand{\subHeaderItemEnd}{
+    \end{itemize}\end{justify}
+}
+
+\newcommand{\listStart}{
+    \begin{justify}\begin{itemize}[
+        leftmargin=3ex, 
+        rightmargin=2ex, 
+        noitemsep,
+        labelsep=1.2mm,
+        itemsep=0.5mm
+    ]
+}
+
+\newcommand{\listItem}[2]{
+  \item{
+    \textbf{#1}{\hspace{1mm}#2}
+  }
+}
+
+\newcommand{\listEnd}{
+    \end{itemize}\end{justify}\vspace{-5.0mm}
 }
 
 %---- End of Packages and Functions --------
@@ -193,144 +220,127 @@
 
 %-----------EDUCATION-----------------
 
-\section{\textcolor{olive}{\textbf{Education}}}
-	\resumeSubHeadingListStart
+\cvSection{Education}
+	\subHeaderStart
 		
-    \resumeSubheading
+    \subHeaderEntry
         {University of Southern California}
         {Aug. 2025 - Dec. 2027 (Expected)}
         {Master of Science in Computer Science - Scientists and Engineers}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} Los Angeles, CA}
 
-        \resumeItemListStart
-
-        \resumeItemListEnd
+        \subHeaderItemStart
+        \subHeaderItemEnd
 		
-    \resumeSubheading
+    \subHeaderEntry
         {National Central University}
         {Sep. 2020 - Jun. 2024}
         {Bachelor of Science in Atmospheric Sciences}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} Taoyuan, Taiwan}
 		
-    \resumeItemListStart
-        \item {
-            Minor specialty: Programming design in computer science
-        }
-    \resumeItemListEnd
+        \subHeaderItemStart
+            \subHeaderItem{Minor specialty:}{Programming design in computer science}
+        \subHeaderItemEnd
 		  
-	\resumeSubHeadingListEnd
+	\subHeaderEnd
 
 %-----------Technical skills-----------------
 
-\section{\textcolor{olive}{\textbf{Skills}}}
+\cvSection{Skills}
 
-    \begin{itemize}[
-        leftmargin=0.20in, 
-        label={-}, 
-        itemsep=-2pt, 
-        topsep=0pt,
-        rightmargin=0.10in
-    ]
-        \item Programmings: Python (primary), TypeScript, C++/C, Java, Go, JavaScript, X86 Assembly, \LaTeX
-        \item DevOps: AWS, Docker, Git, Bash, GitHub Actions, Azure, Terraform, Kubernetes, mySQL, Redis
-        \item ML/DL: LangChain, TensorFlow, Scikit-learn, Keras, Numpy, Pandas
-    \end{itemize}
-
+    \listStart
+        \listItem{Frontend:}{TypeScript, Next.js, React, Tailwind CSS, Vitest, Jest, Turborepo}
+        \listItem{Backend:}{Python, Django, FastAPI, Flask, Go, Redis, mySQL, Supabase, Firebase}
+        \listItem{DevOps:}{AWS, Docker, Git, Linux, GitHub Actions, Azure}
+    \listEnd
 
 %-----------PROFESSIONAL EXPERIENCE-----------------
-\section{\textcolor{olive}{\textbf{Industry Experience}}}
-    \resumeSubHeadingListStart
+\cvSection{Industry Experience}
+    \subHeaderStart
     
-    \resumeSubheading
-        {eCloudValley Digital Technology}
-        {Mar. 2024 - May. 2024}
-        {Cloud Engineer Intern}
+    \subHeaderEntry
+        {Futurenest}
+        {Jan. 2025 - Feb. 2025}
+        {Backend Intern}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} New Taipei, Taiwan}
 
-        \resumeItemListStart
-            \item {Led a team of 5 to enhance issue pools with AWS Bedrock, boosting cloud support efficiency by 80\% through multi-language support and 95\% accurate image recognition. Honored as the top-achieving internship team.}
-            \item {Utilized a serverless architecture on AWS Lambda, performing troubleshooting with CloudWatch, deployed via AWS CDK, and integrated with DynamoDB and Bedrock services.}
-            \item {Documented issues in 10+ mock cases, such as VPC entry failures, EC2 Apache server restarts, and S3 photo access problems, and provided detailed solutions for interns. Refer \href{https://github.com/1chooo/ecv-training-materials/tree/main/msp/aws_challenge}{\underline{here}} for a comprehensive list.}
-        \resumeItemListEnd
+        \subHeaderItemStart
+            \subHeaderItem{}{Educated 700+ cloud developers and achieved 96\% user satisfaction by conducting 2 technical workshops, developing an open-source project, and 1 UAD with AWS cloud services. Refer \href{https://github.com/aws-educate-tw/aws-line-business-card-workshop}{\underline{here}} for the source code.}
+            \subHeaderItem{}{Conducted a comprehensive 35+ page market research study on cloud suppliers as part of an 11-member team.}
+        \subHeaderItemEnd
 
-    \resumeSubheading
-        {PEGATRON Corporation}
-        {Jul. 2023 - Aug. 2023}
-        {Software Engineer Intern}
-        {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
-            
-        \resumeItemListStart
-            \item {Executed a POC, adapting an LLM model for Smart Manufacturing, and was awarded Silver internship team.}
-            \item {Collaborated with a team of 5, utilized Git, a CI/CD pipeline, and followed an agile Scrum workflow.}
-            \item {Implemented {Prompt Engineering} and {LangChain} for the {NVIDIA Ominerve visual robot}, enabling seamless speech/text operation, boosting test support by {83\%} across {6-11} scenarios with {85\%} stability.}
-        \resumeItemListEnd
-
-    \resumeSubHeadingListEnd
-  
-%-----------PROFESSIONAL EXPERIENCE-----------------
-\section{\textcolor{olive}{\textbf{Extracurricular Activities}}}
-    \resumeSubHeadingListStart
-    
-    \resumeSubheading
+    \subHeaderEntry
         {Amazon Web Services}
         {Aug. 2023 - Feb. 2024}
         {Cloud Ambassador Technical Support}
         {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
 
-        \resumeItemListStart
-            \item Educated 700+ cloud developers and achieved 96\% user satisfaction by conducting 2 technical workshops, developing an open-source project, and 1 UAD with AWS cloud services. Refer \href{https://github.com/aws-educate-tw/aws-line-business-card-workshop}{\underline{here}} for the source code.
-            \item {Conducted a comprehensive 35+ page market research study on cloud suppliers as part of an 11-member team.}
-        \resumeItemListEnd
+        \subHeaderItemStart
+            \subHeaderItem{}{Educated 700+ cloud developers and achieved 96\% user satisfaction by conducting 2 technical workshops, developing an open-source project, and 1 UAD with AWS cloud services. Refer \href{https://github.com/aws-educate-tw/aws-line-business-card-workshop}{\underline{here}} for the source code.}
+            \subHeaderItem{}{Conducted a comprehensive 35+ page market research study on cloud suppliers as part of an 11-member team.}
+        \subHeaderItemEnd
 
-    \resumeSubHeadingListEnd
+    \subHeaderEntry
+        {eCloudValley Digital Technology}
+        {Mar. 2024 - May. 2024}
+        {Cloud Engineer Intern}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} New Taipei, Taiwan}
+
+        \subHeaderItemStart
+            \subHeaderItem{}{Led a team of 5 to enhance issue pools with AWS Bedrock, boosting cloud support efficiency by 80\% through multi-language support and 95\% accurate image recognition. Honored as the top-achieving internship team.}
+            \subHeaderItem{}{Utilized a serverless architecture on AWS Lambda, performing troubleshooting with CloudWatch, deployed via AWS CDK, and integrated with DynamoDB and Bedrock services.}
+            \subHeaderItem{}{Documented issues in 10+ mock cases, such as VPC entry failures, EC2 Apache server restarts, and S3 photo access problems, and provided detailed solutions for interns. Refer \href{https://github.com/1chooo/ecv-training-materials/tree/main/msp/aws_challenge}{\underline{here}} for a comprehensive list.}
+        \subHeaderItemEnd
+
+    \subHeaderEntry
+        {PEGATRON Corporation}
+        {Jul. 2023 - Aug. 2023}
+        {Software Engineer Intern}
+        {\textcolor{gray}{\footnotesize{\faMapMarker}} Taipei, Taiwan}
+            
+        \subHeaderItemStart
+            \subHeaderItem{}{Executed a POC, adapting an LLM model for Smart Manufacturing, and was awarded Silver internship team.}
+            \subHeaderItem{}{Collaborated with a team of 5, utilized Git, a CI/CD pipeline, and followed an agile Scrum workflow.}
+            \subHeaderItem{}{Implemented {Prompt Engineering} and {LangChain} for the {NVIDIA Ominerve visual robot}, enabling seamless speech/text operation, boosting test support by {83\%} across {6-11} scenarios with {85\%} stability.}
+        \subHeaderItemEnd
+
+    \subHeaderEnd
   
 %-----------PROJECTS-----------------
-\section{\textcolor{olive}{\textbf{Selected Projects}}}
-    \resumeSubHeadingListStart
+\cvSection{Selected Projects}
+    \subHeaderStart
 
-    \resumeSubheading
+    \subHeaderEntry
         {1chooo.com} 
-        {
-        \href{https://github.com/1chooo/1chooo.com}{\underline{\faGithub\ 1chooo.com}} 
-        |
-        \href{https://1chooo.com}{\underline{\faDesktop\ Website}} 
-        } % Project Name
-        {Frontend Developer} % Project Name
-        {Jan. 2024 - present} % Event Dates
+        {\href{https://github.com/1chooo/1chooo.com}{\underline{\faGithub\ code}} | \href{https://1chooo.com}{\underline{\faDesktop\ Website}} | \href{https://1chooo.com}{\underline{\faVideo\ Demo}}}
+        {Frontend Developer}
+        {Jan. 2024 - present}
         
-        \resumeItemListStart
-            \item {300+ GitHub stars}
-        \resumeItemListEnd
+        \subHeaderItemStart
+            \subHeaderItem{}{300+ GitHub stars}
+            \subHeaderItem{}{300+ GitHub stars}
+        \subHeaderItemEnd
     
-    \resumeSubheading
+    \subHeaderEntry
         {Hugo Lin Dev} 
-        {
-        \href{https://github.com/1chooo/blog}{\underline{\faGithub\ blog}} 
-        |
-        \href{https://dev.1chooo.com}{\underline{\faDesktop\ Website}} 
-        } % Project Name
-        {Frontend Developer} % Project Name
-        {Jul. 2025 - present} % Event Dates
+        {\href{https://github.com/1chooo/blog}{\underline{\faGithub\ code}} | \href{https://dev.1chooo.com}{\underline{\faDesktop\ Website}} | \href{https://youtu.be/omwBe_uhwFc}{\underline{\faVideo\ Demo}}}
+        {Frontend Developer}
+        {Jul. 2025 - present}
         
-        \resumeItemListStart
-            \item {MDX Blog with Next.js, TypeScript, and Tailwind CSS.}
-        \resumeItemListEnd
+        \subHeaderItemStart
+            \subHeaderItem{}{MDX Blog with Next.js, TypeScript, and Tailwind CSS.}
+            \subHeaderItem{}{MDX Blog with Next.js, TypeScript, and Tailwind CSS.}
+        \subHeaderItemEnd
 
-    \resumeSubHeadingListEnd
+    \subHeaderEnd
 
 %-----------AWARDS-----------------
-\section{\textcolor{olive}{\textbf{Awards}}}
+% \cvSection{Awards}
 
-    \begin{itemize}[
-        leftmargin=0.20in, 
-        label={-}, 
-        itemsep=-2pt, 
-        topsep=0pt,
-        rightmargin=0.10in
-    ]
-        \item Top-Achieving Internship Team, eCloudValley Digital Technology \hfill \hspace{-0.2cm} {\footnotesize{Mar. 2024 - May. 2024}}
-        \item Silver Internship Team, PEGATRON Corporation \hfill {\footnotesize{Jul. 2023 - Aug. 2023}}
-        \item Second Place \& Sustainability Special Award, 2023 Weather Hackathon \hfill \textit{\footnotesize{May. 2023 - Aug. 2023}}
-    \end{itemize}
+%     \listStart
+%         \listItem{}{Top-Achieving Internship Team, eCloudValley Digital Technology \hfill \hspace{-0.2cm} {\footnotesize{Mar. 2024 - May. 2024}}}
+%         \listItem{}{Silver Internship Team, PEGATRON Corporation \hfill {\footnotesize{Jul. 2023 - Aug. 2023}}}
+%         \listItem{}{Second Place \& Sustainability Special Award, 2023 Weather Hackathon \hfill \textit{\footnotesize{May. 2023 - Aug. 2023}}}
+%     \listEnd
 
 \end{document}
