@@ -143,15 +143,11 @@
 
 %---- End of Packages and Functions --------
 
-\newcommand{\name}{Hugo (Chun-Ho) Lin} % Your Name
-\newcommand{\course}{Dept. of Atmospheric Science, NCU.} % Your Program
-\newcommand{\roll}{xxxxxxx} % Your Roll No.
-\newcommand{\phone}{+1 (213) 865 5235} % Your Phone Number
-\newcommand{\emaila}{chunholi@usc.edu} %Email 1
-\newcommand{\emailb}{lcho0127@g.ncu.edu.tw} %Email 2
-\newcommand{\myScore}{}
+\newcommand{\name}{Hugo (Chun-Ho) Lin}
+\newcommand{\course}{Dept. of Atmospheric Science, NCU.}
+\newcommand{\phone}{(213) 865 5235}
+\newcommand{\email}{chunholi@usc.edu}
 \newcommand{\announcement}{CS Graduate Student at University of Southern California.}
-% \newcommand{\myScore}{GPA: 3.11/4.30; Rank: 26/35}
 
 \definecolor{linkcolour}{rgb}{0, 0.2, 0.6}
 \hypersetup{
@@ -163,15 +159,16 @@
 
 \begin{document}
 \fontfamily{cmr}\selectfont
+% \fontfamily{phv}\selectfont
 
 \begin{center}
     \textbf{\huge \name}
     \vspace{1mm}
 
-    %  \announcement
+    % \announcement
     % \vspace{1mm}
     
-    \href{tel:\phone}{\underline{\smash{\text{\phone}}}} | \href{mailto:\emaila}{\underline{\smash{\text{\emaila}}}} | \href{https://1chooo.com/}{\underline{\smash{\text{1chooo.com}}}} | \href{https://github.com/1chooo}{\underline{\smash{\text{github/1chooo}}}} | \href{https://www.linkedin.com/in/1chooo/}{\underline{\smash{\text{in/1chooo}}}}
+    \href{tel:\phone}{\underline{\smash{\text{\phone}}}} | \href{mailto:\email}{\underline{\smash{\text{\email}}}} | \href{https://1chooo.com/}{\underline{\smash{\text{1chooo.com}}}} | \href{https://github.com/1chooo}{\underline{\smash{\text{github/1chooo}}}} | \href{https://www.linkedin.com/in/1chooo/}{\underline{\smash{\text{in/1chooo}}}}
 \end{center}
 
 \cvSection{Education}
@@ -194,6 +191,8 @@
 		
         \subHeaderItemStart
             \subHeaderItem{Minor specialty:}{Programming design in computer science}
+            \subHeaderItem{TA:}{Linux and Edge Computing, Programming Python, Weather and Artificial Intelligence}
+            % \subHeaderItem{Graduate-level Courses:}{The Attack and Defense of Computers, Object-Oriented Analysis and Design}
         \subHeaderItemEnd
 		  
 	\subHeaderEnd
@@ -207,23 +206,23 @@
         \listItem{AI/LLM:}{LangChain, TensorFlow, AWS Bedrock, Azure OpenAI, Scikit-learn, Gradio}
     \listEnd
 
-\cvSection{Industry Experience}
+\cvSection{Internship Experience}
     \subHeaderStart
     
     \subHeaderEntry
         {Futurenest}
-        {Jan 2025 - Feb 2025}
-        {R\&D Engineer Intern}
+        {Dec 2024 - Jan 2025}
+        {R\&D Engineer}
         {Taipei, Taiwan}
 
         \subHeaderItemStart
-            \subHeaderItem{}{Built system-integrating APIs with Django, deployed via AWS ECR, developed a Next.js chat UI using v0.dev to test the APIs, delivered API docs to clients, and integrated with GitHub Actions for CI/CD.}
+            \subHeaderItem{}{Built system-integrating APIs with Django (100\% test coverage) deployed via AWS ECR, developed a Next.js chat UI with \href{https://v0.app}{\underline{\smash{v0.app}}}, delivered API docs to clients, and set up CI/CD with GitHub Actions.}
         \subHeaderItemEnd
 
     \subHeaderEntry
         {eCloudValley Digital Technology}
         {Mar 2024 - May 2024}
-        {Cloud Engineer Intern}
+        {Cloud Engineer}
         {New Taipei, Taiwan}
 
         \subHeaderItemStart
@@ -233,7 +232,7 @@
     \subHeaderEntry
         {PEGATRON Corporation}
         {Jul 2023 - Aug 2023}
-        {AI Engineer Intern}
+        {AI Engineer}
         {Taipei, Taiwan}
             
         \subHeaderItemStart
@@ -242,14 +241,14 @@
 
     \subHeaderEnd
   
-\cvSection{Selected Projects}
+\cvSection{Projects}
     \subHeaderStart
 
     \subHeaderEntry
         {1chooo.com} 
         {Jan 2024 - Present}
         {Frontend Developer}
-        {\href{https://github.com/1chooo/1chooo.com}{\underline{\smash{\text{github}}}} | \href{https://1chooo.com}{\underline{website}} | \href{https://1chooo.com}{\underline{video demo}}}
+        {\href{https://github.com/1chooo/1chooo.com}{\underline{\smash{github}}} | \href{https://1chooo.com}{\underline{website}} | \href{https://1chooo.com}{\underline{video demo}}}
         
         \subHeaderItemStart
             \subHeaderItem{}{Developed a portfolio/blog with Next.js, React, Tailwind, and TypeScript; integrated Supabase, SWR, MDX, Motion, and SSR, achieving near-perfect Lighthouse scores and 300+ GitHub stars.}
@@ -259,7 +258,7 @@
         {UML Editor} 
         {Mar 2024 - Jun 2024}
         {Software Architect}
-        {\href{https://github.com/1chooo/uml-editor}{\underline{\smash{\text{github}}}} | \href{https://youtu.be/omwBe_uhwFc}{\underline{video demo}}}
+        {\href{https://github.com/1chooo/uml-editor}{\underline{\smash{github}}} | \href{https://youtu.be/omwBe_uhwFc}{\underline{video demo}}}
         
         \subHeaderItemStart
             \subHeaderItem{}{Leveraged the Model--View--Controller (MVC) architecture, implemented a loosely coupled UML editor with the goal of achieving "unchanged underlying logic and continuous expandability in the future"!}
@@ -269,7 +268,7 @@
         {Online Anonymous Multi-User Message Board} 
         {Oct 2023 - Dec 2023}
         {Fullstack Developer}
-        {\href{https://github.com/1chooo/anon-chat}{\underline{\smash{\text{github}}}} | \href{https://youtu.be/rxuLbzMV4fE}{\underline{video demo}}}
+        {\href{https://github.com/1chooo/anon-chat}{\underline{\smash{github}}} | \href{https://youtu.be/rxuLbzMV4fE}{\underline{video demo}}}
         
         \subHeaderItemStart
             \subHeaderItem{}{Implemented Web Sockets in Go for real-time multi-user chatrooms using TCP protocol. Achieved multi-threading and non-blocking sockets, integrated socket API with React frontend.}
@@ -283,7 +282,7 @@
     \subHeaderEntry
         {Amazon Web Services}
         {Aug 2023 - Feb 2024}
-        {Cloud Ambassador Technical Support}
+        {Cloud Ambassador - Technical Support}
         {Taipei, Taiwan}
 
         \subHeaderItemStart
