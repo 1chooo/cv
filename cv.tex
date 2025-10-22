@@ -18,8 +18,7 @@
 \usepackage{marvosym}
 \usepackage{verbatim}
 \usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}    % Hide the link box
-% \usepackage{hyperref}             % Show the link box
+\usepackage{hyperref}
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
 \usepackage{multicol}
@@ -43,10 +42,6 @@
     bottom=1cm
 }
 
-% Adjust margins
-%\addtolength{\oddsidemargin}{-0.5in}
-%\addtolength{\evensidemargin}{-0.5in}
-%\addtolength{\textwidth}{1in}
 \usepackage[most]{tcolorbox}
 \tcbset{
 	frame code={}
@@ -87,10 +82,10 @@
 
 \newcommand{\subHeaderEntry}[4]{
 \item[]\begin{tabular*}{0.98\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textit{\footnotesize{#2}} \\
+        \textbf{#1} & {\footnotesize{#2}} \\
         \textit{\footnotesize{#3}} &  \footnotesize{#4}\\
     \end{tabular*}
-    \vspace{-3.0mm}
+    \vspace{-4.0mm}
 }
 
 \newcommand{\subHeaderStart}{
@@ -98,7 +93,7 @@
 }
 
 \newcommand{\subHeaderEnd}{
-    \end{itemize}\vspace{-5.0mm}
+    \end{itemize}\vspace{-4.0mm}
 }
 
 \newcommand{\subHeaderItemStart}{
@@ -119,6 +114,7 @@
 
 \newcommand{\subHeaderItemEnd}{
     \end{itemize}\end{justify}
+    \vspace{-5.0mm}
 }
 
 \newcommand{\listStart}{
@@ -138,14 +134,14 @@
 }
 
 \newcommand{\listEnd}{
-    \end{itemize}\end{justify}\vspace{-5.0mm}
+    \end{itemize}\end{justify}\vspace{-8.0mm}
 }
 
 %---- End of Packages and Functions --------
 
 \newcommand{\name}{Hugo (Chun-Ho) Lin}
 \newcommand{\course}{Dept. of Atmospheric Science, NCU.}
-\newcommand{\phone}{(213) 865 5235}
+\newcommand{\phone}{(213) 865-5235}
 \newcommand{\email}{chunholi@usc.edu}
 \newcommand{\announcement}{CS Graduate Student at University of Southern California.}
 
@@ -172,11 +168,13 @@
 \end{center}
 
 \cvSection{Education}
+
+\vspace{-2.0mm}
 	\subHeaderStart
 		
     \subHeaderEntry
         {University of Southern California}
-        {Aug 2025 - Dec 2027 (Expected)}
+        {August 2025 - Present}
         {Master of Science in Computer Science - Scientists and Engineers}
         {Los Angeles, CA}
 
@@ -185,7 +183,7 @@
 		
     \subHeaderEntry
         {National Central University}
-        {Sep 2020 - Jun 2024}
+        {September 2020 - June 2024}
         {Bachelor of Science in Atmospheric Sciences}
         {Taoyuan, Taiwan}
 		
@@ -199,89 +197,108 @@
 
 \cvSection{Skills}
 
+\vspace{-1.0mm}
+
     \listStart
         \listItem{Frontend:}{TypeScript, Next.js, React, Tailwind CSS, Vite, Vitest, Jest, Turborepo}
-        \listItem{Backend:}{Python, Django, FastAPI, Flask, AWS Lambda, Go, Redis, mySQL, Supabase, Firebase}
+        \listItem{Backend:}{Python (Django, FastAPI, Flask), AWS Lambda, Go, Redis, mySQL, Supabase, Firebase}
         \listItem{DevOps:}{AWS, Docker, Git, Linux, GitHub Actions, Azure}
         \listItem{AI/LLM:}{LangChain, TensorFlow, AWS Bedrock, Azure OpenAI, Scikit-learn, Gradio}
     \listEnd
 
 \cvSection{Internship Experience}
+
+\vspace{-2.0mm}
+
     \subHeaderStart
     
     \subHeaderEntry
         {Futurenest}
-        {Dec 2024 - Jan 2025}
+        {December 2024 - January 2025}
         {R\&D Engineer}
         {Taipei, Taiwan}
 
         \subHeaderItemStart
-            \subHeaderItem{}{Built system-integrating APIs with Django (100\% test coverage) deployed via AWS ECR, developed a Next.js chat UI with \href{https://v0.app}{\underline{\smash{v0.app}}}, delivered API docs to clients, and set up CI/CD with GitHub Actions.}
+            \subHeaderItem{}{Shipped Django APIs (100\% test coverage), containerized via AWS ECR, and documented for external use.}
+            \subHeaderItem{}{Created Next.js chat UI with \href{https://v0.app}{\underline{\smash{v0.app}}}, and integrated it with the custom API backend}
         \subHeaderItemEnd
 
     \subHeaderEntry
         {eCloudValley Digital Technology}
-        {Mar 2024 - May 2024}
+        {March 2024 - May 2024}
         {Cloud Engineer}
         {New Taipei, Taiwan}
 
         \subHeaderItemStart
-            \subHeaderItem{}{Led a 5-member agile team to build a serverless AWS Bedrock solution with multi-language and image recognition support (95\% accuracy), boosting support efficiency by 80\%; documented 10+ mock cases and earned top internship honors. (See \href{https://github.com/TODAM-tw/todam-ticket-system}{\underline{GitHub}} for source code)}
+            \subHeaderItem{}{Led a 5-member agile team to build a serverless AWS Bedrock solution, earning top internship honors.}
+            \subHeaderItem{}{Engineered multi-modal recognition (95\% accuracy, 10+ cases) for ticket classification.}
+            \subHeaderItem{}{Drove 80\% efficiency increase through automated ticket system deployment.}
         \subHeaderItemEnd
 
     \subHeaderEntry
         {PEGATRON Corporation}
-        {Jul 2023 - Aug 2023}
+        {July 2023 - August 2023}
         {AI Engineer}
         {Taipei, Taiwan}
             
         \subHeaderItemStart
-            \subHeaderItem{}{Developed a POC using LLMs and LangChain for the NVIDIA Ominerve robot, enabling voice/text control with 85\% stability; boosted test support by 83\% and earned Silver internship award in a 5-person agile team.}
+            \subHeaderItem{}{Executed an LLM POC for Smart Manufacturing, earning a Silver internship team award.}
+            \subHeaderItem{}{Utilized Prompt Engineering and LangChain to enable speech/text operation on the NVIDIA Omniverse robot.}
+            \subHeaderItem{}{Boosted test support by 83\% (11 scenarios, 85\% stability) in a 5-member Agile team using GitLab.}
         \subHeaderItemEnd
 
     \subHeaderEnd
   
 \cvSection{Projects}
+
+\vspace{-2.0mm}
+
     \subHeaderStart
 
     \subHeaderEntry
         {1chooo.com} 
-        {Jan 2024 - Present}
+        {January 2024 - Present}
         {Frontend Developer}
         {\href{https://github.com/1chooo/1chooo.com}{\underline{\smash{github}}} | \href{https://1chooo.com}{\underline{website}} | \href{https://1chooo.com}{\underline{video demo}}}
         
         \subHeaderItemStart
-            \subHeaderItem{}{Developed a portfolio/blog with Next.js, React, Tailwind, and TypeScript; integrated Supabase, SWR, MDX, Motion, and SSR, achieving near-perfect Lighthouse scores and 300+ GitHub stars.}
+            \subHeaderItem{}{Developed a Next.js portfolio/blog using React, Tailwind, TypeScript, Supabase, SWR, and MDX.}
+            \subHeaderItem{}{Optimized performance to achieve near-perfect Lighthouse scores and gained 300+ GitHub stars.}
         \subHeaderItemEnd
     
     \subHeaderEntry
-        {UML Editor} 
-        {Mar 2024 - Jun 2024}
-        {Software Architect}
-        {\href{https://github.com/1chooo/uml-editor}{\underline{\smash{github}}} | \href{https://youtu.be/omwBe_uhwFc}{\underline{video demo}}}
+        {ToDAM} 
+        {March 2024 - May 2024}
+        {Cloud Developer}
+        {\href{https://github.com/TODAM-tw/todam-ticket-system}{\underline{\smash{github}}} | \href{https://youtu.be/i86gxusBZNY}{\underline{video demo}}}
         
         \subHeaderItemStart
-            \subHeaderItem{}{Leveraged the Model--View--Controller (MVC) architecture, implemented a loosely coupled UML editor with the goal of achieving "unchanged underlying logic and continuous expandability in the future"!}
+            \subHeaderItem{}{Built a hybrid-cloud ticket system using FastAPI on AWS Lambda and Azure to process 100+ daily tickets.}
+            \subHeaderItem{}{Developed cost-effective APIs to streamline categorization/routing; deployed using Docker/AWS ECR and optimized with AWS DynamoDB.}
         \subHeaderItemEnd
 
     \subHeaderEntry
         {Online Anonymous Multi-User Message Board} 
-        {Oct 2023 - Dec 2023}
+        {Octobor 2023 - December 2023}
         {Fullstack Developer}
         {\href{https://github.com/1chooo/anon-chat}{\underline{\smash{github}}} | \href{https://youtu.be/rxuLbzMV4fE}{\underline{video demo}}}
         
         \subHeaderItemStart
-            \subHeaderItem{}{Implemented Web Sockets in Go for real-time multi-user chatrooms using TCP protocol. Achieved multi-threading and non-blocking sockets, integrated socket API with React frontend.}
+            \subHeaderItem{}{Implemented real-time multi-user chatrooms using Go WebSockets with multi-threading and non-blocking sockets.}
+            \subHeaderItem{}{Designed the Go socket API and integrated it with a React frontend for a seamless user experience.}
         \subHeaderItemEnd
 
     \subHeaderEnd
 
 \cvSection{Extracurricular Activities}
+
+\vspace{-2.0mm}
+
     \subHeaderStart
 
     \subHeaderEntry
         {Amazon Web Services}
-        {Aug 2023 - Feb 2024}
+        {August 2023 - February 2024}
         {Cloud Ambassador - Technical Support}
         {Taipei, Taiwan}
 
